@@ -1,0 +1,108 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("background.jpg");
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#fromWrapper {
+  background-color: rgba(0, 0, 0, 0.45);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#formContainer {
+  background-color: rgba(0, 0, 0, 0.75);
+  width: 35%;
+  height: 95vh;
+  border-radius: 7px;
+  padding: 4rem;
+  color: #737373;
+}
+
+#formContainer h1 {
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+
+input {
+  padding: 1rem;
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: #323233;
+  border-radius: 6px;
+}
+
+input[type="submit"] {
+  background-color: #e40915;
+  color: white;
+  font-weight: bolder;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+input::placeholder {
+  font-size: 16px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  font-size: smaller;
+}
+
+#checkboxContainer {
+  display: flex;
+}
+
+#checkbox {
+  width: 15px !important;
+  margin-right: 3px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#formFooter {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 15%;
+}
+
+/* mobile screens */
+@media (max-width: 700px) {
+  #formContainer {
+    width: 90%;
+  }
+}
+
+/* tablet screens */
+@media (min-width: 700px) and (max-width: 1000px) {
+  #formContainer {
+    width: 60%;
+  }
+}
+
+/* it will be applied while printing the page */
+@media print {
+  input[type="submit"] {
+    background-color: blueviolet;
+  }
+}
